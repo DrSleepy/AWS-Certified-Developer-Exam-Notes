@@ -1,7 +1,7 @@
 # EBS - Elastic Block Storage
 
 EBS is simply a hard disk (used for storage).
-It sorks hand in hand with EC2 as EBS (or storage) are attached to EC2 instances.
+It works hand in hand with EC2 as EBS (or storage) are attached to EC2 instances.
 
 1. Is used to store files on an EC2 instance or even run a DB on the EC2 instance amongst other things
 2. EBS is highly available meaning its data is replicated into different availability zones in case of any failures on the primary
