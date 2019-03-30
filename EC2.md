@@ -13,7 +13,7 @@ A "virtual" server (or instance) that provides resizeable compute capacity
    T - cheap general purpose (think T2 Micro - or Titanfall 2)
 
    D - Density
-   R - RAM
+   R - RAMk
 
    M - Main choice for general purpose apps
    C - Compute
