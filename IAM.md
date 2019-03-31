@@ -7,15 +7,15 @@ Manage users and their level of access. It is NOT limited by regions
 1. Is the center of control for your AWS account
 2. Allows Shared access to your AWS account
 3. Allows Granular permissions -
-   3.1 Give users tailored permissions
+   1. Give users tailored permissions
 4. Allows Identity Federation Management (FIM) -
-   4.1 Allows users to be authenticated using 3rd Party services such as Facebook
+   1. Allows users to be authenticated using 3rd Party services such as Facebook
 5. Allows multifactor authentication
 6. Allows users/devices to obtain temporary access to your AWS resources (such as S3) -
-   6.1 Still requires a password
+   1. Still requires a password
 7. Allow you to set up a password rotation policy
 8. Supports PCI DSS Compliance -
-   8.1 It must be PCI DSS Compliant in order to meet industry standards for payments
+   1. It must be PCI DSS Compliant in order to meet industry standards for payments
 
 ## IAM - Critial Terms
 

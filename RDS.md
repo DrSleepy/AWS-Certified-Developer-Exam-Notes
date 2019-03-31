@@ -6,28 +6,28 @@ RDS is an SQL database such as MySQL, Oracle, MariaDB etc. Amazon's own RDS is A
 
 There are 2 types of backups for AWS:
 
-Key note: A restored backup of either type will result in a new RDS instance, resulting in a new DNS endpoint
+**Key note: A restored backup of either type will result in a new RDS instance, resulting in a new DNS endpoint**
 
 1. Automated Backups -
-   1.1 Allows you to recover your database at any point within a retention period
-   1.2 A retention period can be between 1 to 35 days
-   1.3 Automate Backups will take a fully daily snapshot of the database
-   1.4 Along with the snapshot, tt will also store transation logs throughout the day
-   1.5 Recovering an automated backup will choose the most recent daily back up before applying transation logs relevant to that day. This allows you to do a point in time recovery down to a second, within the retention period
-   1.6 Automated backups are enabled by default
-   1.7 The backups are stored in S3, giving you free storage space equal to the size of your database
-   1.8 Backups are taken within a defined window. During this time, you may experience higher latency
-   1.9 The backup is deleted once you delete the RDS instance, unlike database snapshots
+   1. Allows you to recover your database at any point within a retention period
+   2. A retention period can be between 1 to 35 days
+   3. Automate Backups will take a fully daily snapshot of the database
+   4. Along with the snapshot, tt will also store transation logs throughout the day
+   5. Recovering an automated backup will choose the most recent daily back up before applying transation logs relevant to that day. This allows you to do a point in time recovery down to a second, within the retention period
+   6. Automated backups are enabled by default
+   7. The backups are stored in S3, giving you free storage space equal to the size of your database
+   8. Backups are taken within a defined window. During this time, you may experience higher latency
+   9. The backup is deleted once you delete the RDS instance, unlike database snapshots
 2. Databse Snapshots -
-   2.1 Snapshots are done manually
-   2.2 They are stored even after you delete the original RDS instance, unlike automated backups
+   1. Snapshots are done manually
+   2. They are stored even after you delete the original RDS instance, unlike automated backups
 
 ## RDS - Encryption
 
 1. Database Encryption is done using AWS KMS (Key Management Service).
 2. Once a database has been encrypted, the same will be done to all its replicas.
 3. As it stands, encrypting an exisiting DB instance is not supported.
-   3.1 To encrypt a DB instance: Create snapshot of DB > Make copy of snapshot > encrypt copy
+   1. To encrypt a DB instance: Create snapshot of DB > Make copy of snapshot > encrypt copy
 
 Encryption supported for the follow databases:
 
@@ -73,7 +73,7 @@ Replicas are used for very heavy read-heavy database workloads.
 4. Each read replica will have its own DNS (URL) endpoint
 5. A read replica can have Multi-AZ
 6. Read replicas can be changed to become their own databases.
-   6.1 This will break the replication
+   1. This will break the replication
 7. Read replica can be hosted in an entirely different region
 
 Supported Read Replica Databases:

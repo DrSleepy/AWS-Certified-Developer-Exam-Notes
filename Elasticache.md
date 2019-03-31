@@ -7,12 +7,12 @@ thus reducing the load on the database. Especially used on read-heavy databases.
 ## Elasticache - Supported Cache Engines
 
 1. Memcached -
-   1.1 Object caching system
-   1.2 Used when you are not concerned about redundancy
-   1.3 Used primarily to ease the load on the database
+   1. Object caching system
+   2. Used when you are not concerned about redundancy
+   3. Used primarily to ease the load on the database
 2. Redis -
-   2.1 Key-Value caching system
-   2.2 Supports Master / Slave replication
-   2.2 Supports Multi-AZ access
-   2.3 Supports failover, meaning it is replicated in case the primary case fails
-   2.4 Used especially when working with leaderboards, sets and lists
+   1. Key-Value caching system
+   2. Supports Master / Slave replication
+   3. Supports Multi-AZ access
+   4. Supports failover, meaning it is replicated in case the primary case fails
+   5. Used especially when working with leaderboards, sets and lists
