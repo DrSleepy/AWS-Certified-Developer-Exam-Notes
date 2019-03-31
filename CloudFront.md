@@ -7,8 +7,9 @@ CloudFront is a bunch of servers around the world that host your cached content 
 
 ## CloudFront - Edge Locations
 
-The bunch of servers around the world are referred to as Edge Locations.
-CloudFront utilizes these edge locations to cache your content.
+1. The 'bunch of servers' around the world are referred to as Edge Locations.
+2. CloudFront utilizes these edge locations to cache your content.
+3. It is not only used for READs but also PUTs.
 
 **Edge Locations are NOT limit to AWS Regions. There are many more edge locations than AWS Regions**
 
