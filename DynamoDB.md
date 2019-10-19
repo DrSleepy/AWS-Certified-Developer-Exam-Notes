@@ -157,7 +157,7 @@ is too high for your RCU/WRU set on the table.
 - Logs are encrypted at rest
 - Logs are stored for 24 hours
 - Accessed using a dedicated endpoint (ARN)
-- By default, the Partition Key is Recorded
+- By default, the Primary Key is Recorded
 - Before and After images can be captured
 - Events are recorded in near real-time
 - Can be linked to a lambda
