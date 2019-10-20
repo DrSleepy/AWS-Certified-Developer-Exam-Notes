@@ -13,9 +13,11 @@
 - SQS queues are short-polling by default (expensive)
   - The consumer is constantly polling
   - Queue returns a response even if the queue is empty
-- SQS queus has long-polling (cheap)
+- SQS queues has long-polling (cheap)
   - Reduces the amount of calls your consumer makes to the queue
   - Queue only returns a response once there is a message in the queue or the polling timeout is reached
+  - maximum timeout is 20 seconds
+- Pay-as-you-go
 
 ## Queue Types
 
@@ -43,3 +45,4 @@
 - If the consumer is not able to process the message within the visibility timeout, then the message is placed back onto the queue, which can result in the same message being delivered twice
 - Default visibility timeout is 30 seconds
 - Maximum visibility timeout is 12 hours
+- Timeout can be increased with the 'ChangeMessageVisiblity' API call
