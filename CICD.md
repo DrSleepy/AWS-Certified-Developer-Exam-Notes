@@ -37,7 +37,7 @@ code is deployed into Production as soon as it has successfully passed through t
 - Can only be used for EC2 and on-premise servers, not supported for Lambda
 - If you need to roll back your changes, the previous version of the application will need to be re-deployed
 
-**Blue-Green deployment approach:** 
+**Blue-Green deployment approach:**
 
 - Applcation is not stopped
 - New instances are provisioned in seperate, containing the latest code
@@ -57,4 +57,5 @@ code is deployed into Production as soon as it has successfully passed through t
 ## CodePipeline
 
 - CI/CD workflow tool (build, test, deploy)
-- Helps you automate your entire release process
+- Helps you automate your entire end-to-end release process
+- A change in an S3 bucket can trigger a build pipeline. So Codepipeline is not only restricted to code commits like bitbucket pipeline
