@@ -6,6 +6,14 @@ Lambdas are serverless, region based functions that run on demand.
 2. Functions are independent, 1 event = 1 function
 3. Multiple events can run in parallel
 4. Can call other lambda(s)
+5. 1,000 concurrent lambda executions per region (default)
+   5.1 Exceeding the 1,000 limit will throw TooManyRequestsException (HTTP 429)
+   5.2 Limit can be increased by contacting AWS Support Center
+6. By default, lambda will not have access to any resources living inside a private subnet on a VPC.
+   Lambda access must be configured:
+   6.1 Private subnet ID
+   6.2 Security ID (with required access)
+   6.3 Lambda uses this information to set up Elastic Network Interface (ENI) using an available IP address from your private subnet
 
 # Lambda - Triggers
 

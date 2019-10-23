@@ -24,3 +24,7 @@ Kinesis handles millions of records being streamed in from a bunch of data sourc
 
 - Allows you to run SQL queries on the data being passed into the Stream or Firehose
 - SQL query can save the data to S3, Redshift or ElasticSearch
+
+**Kisesis Client Library:**
+
+- Used to increase number of EC2 instances when all EC2 consumers are above X utilization

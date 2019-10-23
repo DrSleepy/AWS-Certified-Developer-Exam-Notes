@@ -21,7 +21,7 @@
 
 ## Queue Types
 
-**Standard Queue**
+**Standard Queue:**
 
 - Standard queue is the default
 - Allows you to have unlimited number of transactions per second
@@ -29,7 +29,7 @@
   - Occasionally, more than one copy of a message might be delivered out of order
 - Attempts to provide best-effor ordering which ensure that messages are generally deliver in the same order as they are sent, but NOT ALWAYS
 
-**First-In First-Out (FIFO) Queue**
+**First-In First-Out (FIFO) Queue:**
 
 - Order is strictly reserved
 - Messages are only delivered one time
@@ -37,6 +37,17 @@
 - Messages remain available in the queue until a consumer deletes it
 - Supports message groups that allow multiple ordered messages within a single queue
 - Limited to 300 transactions per second but have all the capabilities of the standard queue
+
+**Delay Queue (This is a toggle - Not a seperate queue):**
+
+- Delay delivery of new messages to a queue for a number of seconds
+- Messages sent to the Delay Queue remain invisible to consumers for the duration of the delay period
+- Default delay is 0 seconds, maximum is 900 (15 mins)
+
+- Delay on Standard queue: changing the delay will only take affect on new messages incoming, not messages already on the queue
+- Delay on FIFO queue: changing the delay will take affect on all new messages AND messages already in the queue
+
+- Useful for delaying the sending of an email consisting of an online transactions to a customer
 
 ## Visibility Timeout
 
@@ -46,3 +57,9 @@
 - Default visibility timeout is 30 seconds
 - Maximum visibility timeout is 12 hours
 - Timeout can be increased with the 'ChangeMessageVisiblity' API call
+
+## Managing Large messages (over 256KB to 2GB)
+
+- Upload the queue messages to S3
+- Configure SQS to read messages from S3
+- Must use SQS extended Client Library (not available on normal SQS SDK)

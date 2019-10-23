@@ -65,3 +65,9 @@ Manage users and their level of access. It is NOT limited by regions
   4. assume-role-with-web-identity API uses STS to return temporary credentials
   5. Client can now use temporary credentials to access AWS resources (temporary credentials last 1 hour by default)
 - AssumedRoleUser ARN and AssumedRoleID are used to programatically reference the temporary credentials. These are not related to an IAM role or user
+
+
+## Testing IAM Policies
+
+- Use the IAM Policy Simulator
+
